@@ -1,0 +1,108 @@
+/* Thiết lập chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Yêu cầu 2: Nút Skip to Main Content (Ẩn đi, chỉ hiện khi dùng phím Tab) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Tô màu nền cho từng khu vực */
+header {
+    background-color: #ffecd2;
+    padding: 20px;
+}
+
+/* Yêu cầu 4: Đặt display inline-block và width 80% cho nav */
+nav {
+    background-color: #c6550f;
+    padding: 10px;
+    display: inline-block;
+    width: 80%;
+}
+
+/* Yêu cầu 5: Chỉnh ảnh trong nav */
+nav img {
+    width: 10%;
+}
+
+main {
+    background-color: #fffcf9;
+    font-size: 18px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #ffe3b3;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Yêu cầu 3: Ẩn CSS cũ của list bằng cách comment */
+/*
+li {
+    display: inline-block;
+    width: 150px;
+}
+*/
+
+/* Style lại li để hiển thị đẹp hơn do đã ẩn code cũ */
+li {
+    margin-bottom: 10px;
+}
+
+li a {
+    color: #ffffff; /* Đã sửa thành màu trắng để đạt chuẩn tương phản WCAG (> 4.5:1) */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Yêu cầu 6 & 8: Thiết lập Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* Yêu cầu 7: Chỉnh ảnh trong Grid */
+.grid img {
+    width: 100%;
+}
+
+/* Yêu cầu 9: Thiết lập Flexbox */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Định dạng Tiêu đề và Đoạn văn */
+h1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color: #9d3c00;
+}
+
+p {
+    line-height: 1.6;
+    color: #333333;
+}
+
+nav ul {
+    list-style-type: none; /* Xóa dấu chấm tròn của danh sách */
+}
