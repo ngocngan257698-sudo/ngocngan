@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery</title>
+    <!-- Nhúng file CSS (nếu có) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Khối hiển thị ảnh lớn và dòng text mặc định -->
+    <div id="image">Hover over an image below to display here.</div>
+
+    <!-- Các ảnh nhỏ (thumbnail). Khi đưa chuột vào (onmouseover) gọi hàm upDate, khi đưa chuột ra (onmouseout) gọi hàm undo -->
+    <img class="preview" alt="Bầu trời đêm" src="https://images.pexels.com/photos/10747740/pexels-photo-10747740.jpeg" onmouseover="upDate(this)" onmouseout="undo()">
+    
+    <img class="preview" alt="Phong cảnh biển" src="https://images.pexels.com/photos/7872581/pexels-photo-7872581.jpeg" onmouseover="upDate(this)" onmouseout="undo()">
+    
+    <img class="preview" alt="Rừng nhiệt đới" src="https://images.pexels.com/photos/32795635/pexels-photo-32795635.jpeg" onmouseover="upDate(this)" onmouseout="undo()">
+
+    <!-- Nhúng file JS chứa 2 hàm ở trên -->
+    <script src="script.js"></script>
+</body>
+</html>
