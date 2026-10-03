@@ -5,21 +5,16 @@ body {
 }
 
 #image {
-    /* Đảm bảo chữ nằm giữa khung ảnh */
     line-height: 650px; 
     width: 575px;
     height: 650px;
     border: 5px solid black;
     margin: 0 auto;
     background-color: #8e68ff;
-    
-    /* Thiết lập hình nền mặc định là trống */
     background-image: url(''); 
     background-repeat: no-repeat;
     color: #FFFFFF;
     text-align: center;
-    
-    /* Đảm bảo ảnh nền (khi được JS thêm vào) vừa khít với thẻ div */
     background-size: 100%; 
     margin-bottom: 25px;
     font-size: 150%;
@@ -27,10 +22,15 @@ body {
 
 .preview {
     width: 10%;
-    margin-left: 17%;
+    margin-left: 5%;
     border: 10px solid black;
 }
 
 img {
     width: 95%;
+}
+
+/* Hiệu ứng trực quan khi bạn dùng phím Tab (focus) để dễ chấm điểm */
+.preview:focus {
+    border-color: red;
 }

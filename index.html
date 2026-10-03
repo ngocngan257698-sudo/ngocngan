@@ -2,22 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Interactive Photo Gallery</title>
-    <!-- Nhúng file CSS (nếu có) -->
+    <!-- Đảm bảo có title để validators (W3C/Wave) không báo lỗi -->
+    <title>Accessible Photo Gallery</title> 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Khối hiển thị ảnh lớn và dòng text mặc định -->
+
+<!-- Step 8: Thêm listener onload vào body -->
+<body onload="initializeGallery()">
+    
     <div id="image">Hover over an image below to display here.</div>
 
-    <!-- Các ảnh nhỏ (thumbnail). Khi đưa chuột vào (onmouseover) gọi hàm upDate, khi đưa chuột ra (onmouseout) gọi hàm undo -->
-    <img class="preview" alt="Bầu trời đêm" src="https://images.pexels.com/photos/10747740/pexels-photo-10747740.jpeg" onmouseover="upDate(this)" onmouseout="undo()">
-    
-    <img class="preview" alt="Phong cảnh biển" src="https://images.pexels.com/photos/7872581/pexels-photo-7872581.jpeg" onmouseover="upDate(this)" onmouseout="undo()">
-    
-    <img class="preview" alt="Rừng nhiệt đới" src="https://images.pexels.com/photos/32795635/pexels-photo-32795635.jpeg" onmouseover="upDate(this)" onmouseout="undo()">
+    <!-- Step 2 & 6: 6 hình ảnh với alt text. Bổ sung onfocus và onblur -->
+    <img class="preview" alt="Bầu trời đêm" src="https://images.pexels.com/photos/10747740/pexels-photo-10747740.jpeg" 
+         onmouseover="upDate(this)" onmouseout="undo()" 
+         onfocus="upDate(this)" onblur="undo()">
+         
+    <img class="preview" alt="Phong cảnh biển" src="https://images.pexels.com/photos/7872581/pexels-photo-7872581.jpeg" 
+         onmouseover="upDate(this)" onmouseout="undo()" 
+         onfocus="upDate(this)" onblur="undo()">
+         
+    <img class="preview" alt="Rừng nhiệt đới" src="https://images.pexels.com/photos/32795635/pexels-photo-32795635.jpeg" 
+         onmouseover="upDate(this)" onmouseout="undo()" 
+         onfocus="upDate(this)" onblur="undo()">
+         
+    <img class="preview" alt="Sa mạc" src="https://images.pexels.com/photos/2088210/pexels-photo-2088210.jpeg" 
+         onmouseover="upDate(this)" onmouseout="undo()" 
+         onfocus="upDate(this)" onblur="undo()">
+         
+    <img class="preview" alt="Thành phố hiện đại" src="https://images.pexels.com/photos/373893/pexels-photo-373893.jpeg" 
+         onmouseover="upDate(this)" onmouseout="undo()" 
+         onfocus="upDate(this)" onblur="undo()">
+         
+    <img class="preview" alt="Hoàng hôn trên sông" src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg" 
+         onmouseover="upDate(this)" onmouseout="undo()" 
+         onfocus="upDate(this)" onblur="undo()">
 
-    <!-- Nhúng file JS chứa 2 hàm ở trên -->
     <script src="script.js"></script>
 </body>
 </html>
